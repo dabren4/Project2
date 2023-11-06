@@ -4,11 +4,11 @@
 stock_combinations = []
 candidate = None
 
-def total_value():
-  pass
+def total_value(candidate, items):
+  return sum(items[i][1] for i in candidate)
 
-def verify_combination():
-  pass
+def verify_combination(M, items, candidate):
+  return total_value(candidate, items) <= M
 
 def stock_maximization (M, items):
   best = None
