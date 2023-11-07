@@ -1,6 +1,8 @@
 # Darren Chen
 # CPSC335
 
+import ast
+
 def parse_file(file_path):
   with open(file_path, 'r') as file:
     lines = file.readlines()
@@ -10,6 +12,15 @@ def parse_file(file_path):
   i = 0
   while i < len(lines):
     N = int(lines[i].strip())
+    i += 1
+
+    stock_and_values = ast.literal_eval(lines[i].strip())
+    i += 1
+    amount = int(lines[i].strip())
+    i += 1
+
+    parsed_results.append((N, stock_and_values, amount))
+    # make a tuple
 
   return parsed_results
 
