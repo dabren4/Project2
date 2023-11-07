@@ -1,6 +1,18 @@
 # Darren Chen
 # CPSC335
 
+def parse_file(file_path):
+  with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+  parsed_results = []
+
+  i = 0
+  while i < len(lines):
+    N = int(lines[i].strip())
+
+  return parsed_results
+
 stock_combinations = []
 candidate = None
 
