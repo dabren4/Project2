@@ -44,3 +44,7 @@ def stock_maximization (M, items):
       if best is None or total_value(candidate) > total_value(best):
         best = candidate
   return best
+
+# tester
+for N, stocks_and_values, amount in parsed_inputs:
+  print(N, stocks_and_values, amount)
