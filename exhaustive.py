@@ -2,6 +2,7 @@
 # CPSC335
 
 import ast
+from itertools import combinations
 
 def parse_file(file_path):
   with open(file_path, 'r') as file:
@@ -28,23 +29,31 @@ file_path = 'input.txt'
 
 parsed_inputs = parse_file(file_path)
 
-stock_combinations = []
-candidate = None
-
 def total_value(candidate, items):
   return sum(items[i][1] for i in candidate)
+
+def total_stocks(candidate, items):
+   return sum(items[i][0] for i in candidate)
 
 def verify_combination(M, items, candidate):
   return total_value(candidate, items) <= M
 
+def stock_combinations(items):
+    for combo_length in range(1, len(items) + 1):
+        for combo in combinations(range(len(items)), combo_length):
+            yield list(combo)
+
 def stock_maximization (M, items):
   best = None
-  for candidates in stock_combinations(items):
-    if verify_combination(M, items, candidate):
-      if best is None or total_value(candidate) > total_value(best):
-        best = candidate
-  return best
+  best_stock_count = 0
+  for candidate in stock_combinations(items):
+      if verify_combination(M, items, candidate):
+          candidate_stock_count = total_stocks(candidate, items)
+          if best is None or candidate_stock_count > best_stock_count:
+              best = candidate
+              best_stock_count = candidate_stock_count
+  return best_stock_count
 
 # tester
 for N, stocks_and_values, amount in parsed_inputs:
-  print(N, stocks_and_values, amount)
+  print(stock_maximization(amount, stocks_and_values))
