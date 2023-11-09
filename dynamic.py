@@ -26,3 +26,6 @@ def parse_file(file_path):
 file_path = 'input.txt'
 
 parsed_inputs = parse_file(file_path)
+
+def stock_maximization(M, items):
+  pass
