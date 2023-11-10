@@ -27,5 +27,8 @@ file_path = 'input.txt'
 
 parsed_inputs = parse_file(file_path)
 
+def total_stocks(items):
+  return sum(item[0] for item in items)
+
 def stock_maximization(M, items):
   pass
