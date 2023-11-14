@@ -31,5 +31,8 @@ def total_stocks(items):
   return sum(item[0] for item in items)
 
 def stock_maximization(M, items):
-  table = [[0] * (M + 1) for _ in range(len(items) + 1)]
+  dp = [[0] * (M + 1) for _ in range(len(items) + 1)]
   #initialize the table
+
+  for i in range(1, len(items) + 1):
+    pass
