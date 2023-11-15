@@ -36,3 +36,7 @@ def stock_maximization(M, items):
 
   for i in range(1, len(items) + 1):
     pass
+
+file_path = 'input.txt'
+
+parsed_inputs = parse_file(file_path)
