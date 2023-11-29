@@ -48,5 +48,7 @@ file_path = 'input.txt'
 
 parsed_inputs = parse_file(file_path)
 
+print("Using the DP program: ")
+
 for N, stocks_and_values, amount in parsed_inputs:
   print(stock_maximization(amount, stocks_and_values))

@@ -54,6 +54,8 @@ def stock_maximization (M, items):
               best_stock_count = candidate_stock_count
   return best_stock_count
 
+print("Using exhaustive program: ")
+
 # tester
 for N, stocks_and_values, amount in parsed_inputs:
   print(stock_maximization(amount, stocks_and_values))
