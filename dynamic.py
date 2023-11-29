@@ -35,8 +35,12 @@ def stock_maximization(M, items):
   #initialize the table
 
   for i in range(1, len(items) + 1):
-    for w in range(1, M + 1):
-      pass
+    for j in range(1, M + 1):
+      if items[i - 1][1] > j:
+        dp[i][j] = dp[i - 1][j]
+      else:
+        pass
+
   return dp[len(items)][M]
 
 file_path = 'input.txt'
