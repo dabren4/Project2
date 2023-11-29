@@ -39,10 +39,14 @@ def stock_maximization(M, items):
       if items[i - 1][1] > j:
         dp[i][j] = dp[i - 1][j]
       else:
-        pass
+        dp[i][j] = max(dp[i - 1][j], #doesn't include items[i - 1]
+                       dp[i - 1][j - items[i-1][1]] + items[i - 1][0]) #does include items[i - 1]
 
   return dp[len(items)][M]
 
 file_path = 'input.txt'
 
 parsed_inputs = parse_file(file_path)
+
+for N, stocks_and_values, amount in parsed_inputs:
+  print(stock_maximization(amount, stocks_and_values))
