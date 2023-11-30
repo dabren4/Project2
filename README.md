@@ -13,6 +13,7 @@ The program takes in the file input.txt that contains the number of companies, t
 num_of_companies
 [[x, y], [x1, y1], ..., [x_n, y_n]]
 amount_of_money
+                                     <--- blank space needed here for parsing reasons
 ```
 - Then run the command to execute the exhaustive search program:
 
