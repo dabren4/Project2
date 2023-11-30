@@ -23,7 +23,9 @@ def parse_file(file_path):
 
   return parsed_results
 
-file_path = 'input.txt'
+# set file path here
+# file_path = 'input.txt'
+file_path = 'testcases.txt'
 
 parsed_inputs = parse_file(file_path)
 
@@ -43,8 +45,6 @@ def stock_maximization(M, items):
                        dp[i - 1][j - items[i-1][1]] + items[i - 1][0]) #does include items[i - 1]
 
   return dp[len(items)][M]
-
-file_path = 'input.txt'
 
 parsed_inputs = parse_file(file_path)
 

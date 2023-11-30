@@ -25,7 +25,9 @@ def parse_file(file_path):
 
   return parsed_results
 
-file_path = 'input.txt'
+# set file path here
+# file_path = 'input.txt'
+file_path = 'testcases.txt'
 
 parsed_inputs = parse_file(file_path)
 

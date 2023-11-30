@@ -7,16 +7,13 @@ This program
 The program takes in the file input.txt that contains the number of companies, the amount of dollars (or other currency) one is allowed to spend, and a list of x and y attributes where x = # of trading stocks and y = monetary value of the trading stocks.
 
 - Make sure Python3 is installed
-- Save input data into input.txt in the format of:
+- Save input data into testcases.txt in the format of:
 
 ```
-
 num_of_companies
-[[x, y], [x1, y1], ...]
+[[x, y], [x1, y1], ..., [x_n, y_n]]
 amount_of_money
-
 ```
-
 - Then run the command to execute the exhaustive search program:
 
 ```
